@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish Line</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/ca25be580a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+		<div class="navbar">
+			<h1>Finish Line</h1>
+			<div class="toggle" id="toggle">
+				<i class="fas fa-bars"></i>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Carreras</a></li>
+					<li><a href="#">Resultados</a></li>
+					<li><a href="#">Contactanos</a></li>
+				</ul>
+			</nav>
+		</div>
+    </header>
+	<aside id="menu">
+		<ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Carreras</a></li>
+            <li><a href="#">Resultados</a></li>
+            <li><a href="#">Contactanos</a></li>
+        </ul>
+	</aside>
+    <div class="filter">
+        <label for="filter">Filtra según tu disciplina</label>
+        <select name="filter" id="filter">
+			<option value="2021">Todas</option>
+			<option value="2022">Ciclismo</option>
+			<option value="2023">Natacion</option>
+			<option value="2023">Obstaculos</option>
+			<option value="2023">Trail</option>
+			<option value="2023">Triatlon</option>
+			<option value="2023">Urbanas</option>	
+		</select>
+    </div>    
+    <main>
+		<div class="card-container">
+			<div class="race-card">
+				<img src="assets/img/marathon.jpg" alt="maratón de santiago">
+				<p>Maratón de Santiago 2022</p>
+				<a href="#">Inscribirme</a>
+			</div>
+			<div class="race-card">
+				<img src="./assets/img/cross.jpg" alt="maratón1">
+				<p>BiciExtrema - Cajón del Maipo</p>
+				<a href="#">Inscribirme</a>
+			</div>
+			<div class="race-card">
+				<img src="./assets/img/obstacle.jpg" alt="maratón1">
+				<p>Spartan Race Santiago 2022</p>
+				<a href="#">Inscribirme</a>
+			</div>
+			<div class="race-card">
+				<img src="./assets/img/marathon2.jpg" alt="maratón1">
+				<p>Maratón de Valparaíso 2022</p>
+				<a href="#">Inscribirme</a>
+			</div>
+			<div class="race-card">
+				<img src="./assets/img/trail.jpg" alt="maratón1">
+				<p>Andes Mountain Marathon</p>
+				<a href="#">Inscribirme</a>
+			</div>
+			<div class="race-card">
+				<img src="./assets/img/triathlon.jpg" alt="maratón1">
+				<p>Triatlón de Pichilemu</p>
+				<a href="#">Inscribirme</a>
+			</div>
+		</div>
+		<div class="page-navigation">
+          <a class="page-link" href="#"><<</a>
+          <a class="page-link" href="#">1</a>
+          <a class="page-link" href="#">2</a>
+          <a class="page-link" href="#">3</a>
+          <a class="page-link" href="#">>></a>
+        </div>
+    </main>
+    <footer>
+		<div class="rrss-icons">
+			<i class="fab fa-cc-mastercard"></i>
+			<i class="fab fa-cc-visa"></i>
+			<i class="fab fa-cc-amex"></i>
+			<i class="fab fa-cc-paypal"></i>
+		</div>
+		<p>Desarrollado por MaruVivas</p>
+    </footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

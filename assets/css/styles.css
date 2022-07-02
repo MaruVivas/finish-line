@@ -1,0 +1,302 @@
+:root {
+--dark-red: #7f0000;
+--light-red: #b71c1c;
+--coral: #f3766a;
+--font1: 'Oxygen', sans-serif;
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	font-size: 62,5%;
+	box-sizing: border-box;
+	font-family: var(--font1);
+}
+
+body {	
+	display: grid;
+	grid-template-areas:
+	"header"
+	"filter"
+	"main"
+	"footer";
+	overflow-x: hidden;	
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	padding: 0.5rem 1rem;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	grid-area: header;
+	background-color: var(--dark-red);
+	color: white;
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	box-sizing: border-box;	
+}
+
+.navbar {
+	width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin-left: 1.5em;
+	
+}
+
+.toggle {
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.nav {
+	display: none;
+	font-size: 1em;
+	margin-right: 1.5em;
+}
+
+.filter {
+	font-weight: 700;
+	font-size: 1rem;
+	grid-area: filter;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--coral);
+	padding: 1rem;
+}
+
+label {
+	margin-top: 1.5rem;
+}
+
+select {
+	margin-top: 1.5rem;
+	font-size: 1rem;
+	color: var(--dark-red);
+	border: 2px solid var(--dark-red);
+	border-radius: 10px;
+	padding: 0.5rem 1rem;
+	width: 50%;
+	
+}
+
+aside {
+	background-color: var(--dark-red);
+	grid-area: aside;
+	position: fixed;
+	top: 67px;
+	width: 50vw;;
+	height: 100vh;
+	transform: translateX(-100%);
+	transition: transform 0.2s;
+	padding: 2rem;
+	font-size: 1rem;
+}
+
+aside.show {
+	transform: translateX(0);
+}
+
+aside ul {
+	padding:0;
+}
+
+aside li {
+	list-style-type: none;
+	text-align: center;
+}
+
+aside a {
+	display: inline-block;
+	margin-top: 1rem;
+	cursor: pointer;	
+}
+
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.card-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+	justify-content: space-around;
+	
+}
+
+.race-card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	border: 2px solid var(--light-red);
+	border-radius: 20px;
+	padding-bottom: 0.5rem;
+	overflow: hidden;
+	margin-top: 3rem;
+	width: 85%;
+	font-size: 1em;	
+}
+
+.race-card p {
+	font-weight: 700;
+	margin: 1rem 0;
+}
+
+.race-card img {
+	width: 100%;
+	height: 70%;
+}
+
+.race-card a {
+	background-color: var(--dark-red);
+	border-radius: 10px;	
+}
+.race-card a:hover{
+	background-color: var(--light-red);
+	text-decoration: none;
+}
+
+.race-card a:active {
+	background-color: var(--coral);
+	color:var(--light-red);
+}
+
+.page-navigation {
+	display: flex;
+	flex-direction: row;
+	margin-top: 2rem;
+	
+}
+
+.page-navigation a {
+	color: var(--light-red);
+	font-size: 1.5em;
+}
+.page-navigation a:focus {
+	color: var(--coral);
+}
+
+footer {
+	background-color: var(--dark-red);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	padding: 0.5rem;
+	}
+
+.rrss-icons {
+	display: flex;
+}
+
+.rrss-icons i {
+	font-size: 2em;
+	margin 	: 1rem;
+}
+
+@media (min-width: 576px) {
+	body {
+		display: grid;
+		grid-template-areas: 
+		"header header"
+		"filter main"
+		"footer footer";
+		grid-template-columns: 300px auto;
+	}
+	
+	header{
+		width: 100%;
+		justify-content: space-between;
+	}
+	
+	.toggle {
+		display: none;
+	}
+	
+	.nav {
+		display: flex;
+		position: fixed;
+		right:20px;
+
+	}
+	
+	.nav ul {
+		display: flex;
+		
+	}
+	
+	.nav li {
+		list-style-type: none;
+	}
+
+
+	.card-container {
+		flex-direction: row;
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+
+	.race-card {
+		width: 40%;
+	}
+
+	footer{
+		width: 100vw;
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		display: grid;
+		grid-template-areas: 
+		"header header"
+		"filter main"
+		"footer main";
+		
+	}
+	.main {
+		height: 100%;
+		grid-area: main;
+	}
+
+	.card-container {
+		
+	}
+	.page-navigation{
+		justify-self: end;
+	}
+	.race-card {
+		width: 30%;
+	}
+	
+	footer{
+		width: auto;
+	}
+
+}
